@@ -1,0 +1,127 @@
+body{
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden;
+} 
+%top-headings{
+    font-size: 36px;
+    line-height:37px;
+    color:$font-color; 
+    font-weight: 400;
+    @media (max-width:1440px){
+        font-size: 28px;
+    }
+    @media (max-width:1280px){
+        font-size: 24px;
+    } 
+    @media (max-width:767px){
+        font-size: 26px;
+        line-height:1.23;
+    }
+}
+%sub-heading{ 
+    font-size: 24px;
+    color:$font-color;
+    font-weight: 400;
+    line-height: 29px;
+    @media (max-width:1024px){
+        font-size: 20px; 
+    }
+    @media (max-width:767px){
+        font-size: 16px;
+        line-height: 27px; 
+    }
+}
+%text{
+    font-size: 16px; 
+    line-height:24px;
+    color:$font-color;
+    font-weight: 300;
+}  
+%space{
+    margin:80px 0;
+    @media (max-width:992px){
+        margin:50px 0;
+    }
+}
+%common-btn{
+    background: $button-color; 
+    padding: 12px 30px;
+    font-size: 16px;
+    position: relative;
+    line-height: 19px;
+    border:1px solid $button-color;
+    z-index: 9;
+    color:$white;
+    font-weight: 400;
+} 
+
+%space{
+    margin:60px 0 0;
+}
+a{
+    text-decoration:none !important;
+    outline:none;
+    &:hover{
+        text-decoration:none !important;
+    }
+}
+button{
+    text-decoration:none;
+    outline:none !important;
+    &:hover{
+    text-decoration:none;
+    }
+    &:focus{
+        outline:none !important;
+    }
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $common-color;
+  opacity: 1 !important; /* Firefox */
+  font-weight:300;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $common-color;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: $common-color;
+}
+
+.common-button{
+    @extend %common-btn;
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #fff;
+    }
+    &:hover{
+        color:$button-color;
+        &:after{
+            width:100%;
+        }
+    }
+}
+.no-after{
+    &:before{
+        display: none !important;
+    }
+}
+.container{
+    max-width:1380px;
+    @media (max-width:1400px){
+        max-width: 100%;
+    }
+}
+img{
+    max-width: 100%;
+}

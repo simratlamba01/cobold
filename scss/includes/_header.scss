@@ -1,0 +1,158 @@
+ header{   
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    padding:10px 0;
+    transition: 0.5s all ease-in-out;
+    &.activeback {
+        background: #fff;
+        transition: 0.5s all ease-in-out;
+        box-shadow:0 11px 19px 0 rgba(124, 124, 124, 0.34);
+    }
+     .navbar-brand{
+         img{
+             @media (max-width:992px){
+                 max-width: 190px;
+             }
+         }
+     }
+     .navbar{
+         @media (max-width:992px){
+             display: block;
+         }
+         .navbar-toggler{ 
+            position: relative;
+            float: right;
+            padding: 9px 10px;
+            margin-top: 3px; 
+            margin-right: 0;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            &:hover {
+                background: transparent !important;
+              }
+            
+              .icon-bar {
+                width: 22px;
+                transition: all 0.2s;
+                display: block;
+                width: 22px;
+                height: 2px;
+                border-radius: 1px;
+                background-color:$font-color;
+              }
+              .top-bar {
+                transform: rotate(45deg);
+                transform-origin: 10% 10%;
+                background-color:$font-color;
+              }
+              .middle-bar {
+                opacity: 0;
+              }
+              .bottom-bar {
+                transform: rotate(-45deg);
+                background-color:$font-color;
+                transform-origin: 10% 90%;
+              }
+            
+              &.collapsed {
+                .top-bar {
+                  transform: rotate(0);      
+                }
+                .middle-bar {
+                  opacity: 1;
+                }
+                .bottom-bar {
+                  transform: rotate(0);
+                }
+            }  
+        }
+     }
+     #mainNavbarCollapse { 
+         @media (min-width:992px){
+            display: block; 
+         }
+         @media (max-width:992px){
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            left: 0;
+        }
+    }
+     .nav{
+         @media (max-width:992px){
+             background: #fff;
+             border-radius: 4px;
+         }
+         .nav-item{
+             margin: 0 10px;
+             @media (max-width:1024px){
+                margin:0 5px;
+            }
+            @media (max-width:992px){
+                margin:0;
+            }
+            @media (max-width:992px){
+                margin:0;
+                padding: 0px 20px;
+            }
+            &.account-item{
+                background:#3F3F3F;
+                padding: 0 20px;
+            }
+             .nav-link{ 
+                 font-size: 16px;
+                 color:$font-color;
+                 line-height: normal;
+                 position: relative;
+                 font-weight: 400;
+                 text-transform: capitalize;
+                 &:hover{
+                     @media (max-width:992px){
+                         color:#fff;
+                     }
+                 }
+                 @media (max-width:1024px){
+                    font-size: 14px;
+                }
+                @media (max-width:992px){
+                    color:$font-color;
+                    font-size: 16px;
+                    border-bottom: 1px solid #6b6b6b;
+                    padding:12px 10px;
+                }
+                 &::before{
+                    content: "";display: inline-block;height: 2px;background-color: #a7cb5a;bottom: 0;position: absolute;width: 0;left: 50%;margin-left: 0;
+                 }
+                 &::after{
+                    content: "";width: 0;height: 2px;position: absolute;left: 0;background: #a7cb5a;bottom: -2px;-webkit-transition: width 0.3s ease 0s;transition: width 0.3s ease 0s;
+                 }
+                 &:hover{
+                     &::after{
+                         width:100%;
+                     }
+                 }
+             }
+             &.active{
+                 a{
+                     border-bottom: 2px solid #a7cb5a;
+                     @media (max-width:767px){
+                         border-bottom: 1px solid #6b6b6b;
+                         color:$white !important;
+                     }
+                 }
+             }
+         }
+     }
+ }  
+
+
+
+.navbar-toggler .icon-bar + .icon-bar {
+	margin-top: 4px;
+}  
